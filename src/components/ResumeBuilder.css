@@ -1,5 +1,40 @@
+input {
+    border: none;
+    border-radius: 10px;
+    background-color: #F3F4F6;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 16px;
+}
+
+
 #resume-builder {
     flex: 1;
     height: 500vh;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#resume-builder > div {
+    border-radius: 20px;
     background-color: white;
+    padding: 20px 30px;
+}
+
+#button-div {
+    display: flex;
+    justify-content: center;
+}
+
+#personal-information {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#personal-information > div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
