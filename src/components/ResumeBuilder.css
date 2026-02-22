@@ -1,12 +1,11 @@
 input {
     border: none;
     border-radius: 10px;
-    background-color: #F3F4F6;
+    background-color: #f3f4f6;
     height: 40px;
     padding-left: 10px;
     font-size: 16px;
 }
-
 
 #resume-builder {
     flex: 1;
@@ -22,9 +21,36 @@ input {
     padding: 20px 30px;
 }
 
-#button-div {
+#resume-builder > #button-div {
+    display: flex;
+    padding: 5px 0px;
+}
+
+#button-div > div {
+    flex: 1;
     display: flex;
     justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 10px 0;
+    border-radius: 20px;
+}
+
+#button-div button {
+    border: none;
+    height: 18px;
+    width: auto;
+    font-size: 20px;
+    font-weight: 350;
+}
+
+#delete-button {
+    background-color: white;
+    color: #e35c5c;
+}
+
+#load-example-button {
+    background-color: #f3f4f6;
 }
 
 #personal-information {

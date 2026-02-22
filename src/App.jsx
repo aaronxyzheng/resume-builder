@@ -3,7 +3,7 @@ import ResumeBuilder from "./components/ResumeBuilder";
 import { useState } from "react";
 
 function App() {
-    const [info, setInfo] = useState({
+    const emptyInfo = {
         personalInfo: {
             name: "",
             email: "",
@@ -11,17 +11,27 @@ function App() {
             website: "",
             location: "",
         },
-    });
+    };
 
     const example = {
         personalInfo: {
-            name: "Aaron Zheng",
-            email: "aaronxyzheng@gmail.com",
-            phoneNumber: "+1 914-610-6511",
-            website: "aaronxyzheng.com",
-            location: "Briarcliff, New York",
+            name: "Tony Stark",
+            email: "tonystark@avengers.com",
+            phoneNumber: "+1 917-531-8008",
+            website: "tonystark.com",
+            location: "Manhattan, New York City",
         },
     };
+
+    const [info, setInfo] = useState(emptyInfo);
+
+    function clearInfo() {
+        setInfo(emptyInfo);
+    }
+
+    function setExample() {
+        setInfo(example);
+    }
 
     function updatePersonalInfo(field, value) {
         setInfo((prev) => ({ ...prev, personalInfo: { ...prev.personalInfo, [field]: value } }));
@@ -30,7 +40,12 @@ function App() {
     return (
         <>
             <Resume info={info} />
-            <ResumeBuilder updatePersonalInfo={updatePersonalInfo} />
+            <ResumeBuilder
+                updatePersonalInfo={updatePersonalInfo}
+                clearInfo={clearInfo}
+                setExample={setExample}
+                personalInfo={info.personalInfo}
+            />
         </>
     );
 }
