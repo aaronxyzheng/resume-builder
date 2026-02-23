@@ -42,14 +42,14 @@ input {
     width: auto;
     font-size: 20px;
     font-weight: 350;
+    background-color: white;
 }
 
-#delete-button {
-    background-color: white;
+#delete-button-div button {
     color: #e35c5c;
 }
 
-#load-example-button {
+#load-example-div, #load-example-div button {
     background-color: #f3f4f6;
 }
 

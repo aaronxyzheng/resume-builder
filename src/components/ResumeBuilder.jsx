@@ -6,14 +6,14 @@ function ResumeBuilder({ updatePersonalInfo, clearInfo, personalInfo, setExample
     return (
         <div id="resume-builder">
             <div id="button-div">
-                <div>
+                <div id="delete-button-div" onClick={() => clearInfo()}>
                     <img src={trashIcon} />
-                    <button id="delete-button" onClick={() => clearInfo()}>
+                    <button>
                         Clear
                     </button>
                 </div>
-                <div id="load-example-button">
-                    <img src={fileDownloadIcon} onClick={() => setExample()} />
+                <div id="load-example-div" onClick={() => setExample()}>
+                    <img src={fileDownloadIcon} />
                     <button>Load Example</button>
                 </div>
             </div>
@@ -64,6 +64,9 @@ function ResumeBuilder({ updatePersonalInfo, clearInfo, personalInfo, setExample
                         onChange={(e) => updatePersonalInfo("location", e.target.value)}
                     />
                 </div>
+            </div>
+            <div id="education">
+                <h1>Education</h1>
             </div>
         </div>
     );

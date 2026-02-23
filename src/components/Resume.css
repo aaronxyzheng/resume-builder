@@ -46,3 +46,48 @@ header #personal-info {
     width: 13px;
     color: white;
 }
+
+#content {
+    flex: 1;
+    padding: 50px 75px;
+}
+
+#content > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-header {
+    background-color: #E0E1DD;
+    color: #0D1B2A;
+    height: 40px;
+
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    font-size: 20px;
+}
+
+.school {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+.school .school-metadata {
+    width: 150px;
+}
+
+.school > div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.school-name {
+    font-weight: bold;
+}
