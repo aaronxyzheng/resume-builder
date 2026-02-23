@@ -8,6 +8,15 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    cursor: pointer;
+    border-radius: 12px;
+    padding: 4px 8px;
+    margin: 0 -8px;
+    transition: background-color 0.2s ease;
+}
+
+.dropdown-section:hover {
+    background-color: #f3f4f6;
 }
 
 .section-name {
@@ -23,4 +32,15 @@
 
 .dropdown-section img.selected {
     transform: rotate(180deg);
+}
+
+.dropdown-children {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    padding: 0 8px;
+}
+
+.dropdown-children.open {
+    max-height: 500px;
 }

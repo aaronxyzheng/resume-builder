@@ -2,6 +2,7 @@ import Resume from "./components/Resume";
 import ResumeBuilder from "./components/ResumeBuilder";
 import { useState } from "react";
 import Data from "./utils/data";
+import School from "./utils/school";
 
 function App() {
     const [info, setInfo] = useState(Data.returnEmptyInfo());
@@ -25,6 +26,13 @@ function App() {
         }));
     }
 
+    function addSchool() {
+        setInfo((prev) => ({
+            ...prev,
+            education: [...prev.education, new School("School", "Degree", "Start", "End", "Location", crypto.randomUUID())]
+        }))
+    }
+
     return (
         <>
             <Resume info={info} />
@@ -34,6 +42,7 @@ function App() {
                 setExample={setExample}
                 info={info}
                 updateSchool={updateSchool}
+                addSchool={addSchool}
             />
         </>
     );

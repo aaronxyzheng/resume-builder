@@ -4,7 +4,7 @@ import PersonalInfo from "./resume-builder/PersonalInfo";
 import Dropdown from "./resume-builder/dropdown";
 import SchoolInput from "./resume-builder/SchoolInput";
 
-function ResumeBuilder({ updateSchool, updatePersonalInfo, clearInfo, info, setExample }) {
+function ResumeBuilder({ addSchool, updateSchool, updatePersonalInfo, clearInfo, info, setExample }) {
     const personalInfo = info.personalInfo;
 
     return (
@@ -16,9 +16,10 @@ function ResumeBuilder({ updateSchool, updatePersonalInfo, clearInfo, info, setE
                 <Dropdown
                     sections={info.education.map((school) => ({
                         name: school.name,
-                        children: <SchoolInput schoolInfo={school} updateSchool={updateSchool}/>,
+                        children: <SchoolInput schoolInfo={school} updateSchool={updateSchool} />,
                     }))}
                 />
+                <button className="add-button" onClick={addSchool}>+ Add School</button>
             </div>
         </div>
     );

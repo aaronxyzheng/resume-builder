@@ -5,6 +5,17 @@ input {
     height: 40px;
     padding-left: 10px;
     font-size: 16px;
+    transition:
+        background-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+    outline: none;
+}
+
+input:focus {
+    background-color: #eaf0ff;
+    box-shadow: 0 0 0 3px rgba(99, 140, 255, 0.35);
+    transform: scaleX(1.01);
 }
 
 #resume-builder {
@@ -18,10 +29,65 @@ input {
     border-radius: 20px;
     background-color: white;
     padding: 20px 30px;
+    animation: fadeSlideUp 0.5s ease both;
+}
+
+#resume-builder > div:nth-child(1) {
+    animation-delay: 0.05s;
+}
+#resume-builder > div:nth-child(2) {
+    animation-delay: 0.15s;
+}
+#resume-builder > div:nth-child(3) {
+    animation-delay: 0.25s;
+}
+#resume-builder > div:nth-child(4) {
+    animation-delay: 0.35s;
 }
 
 .dropdown-div {
     display: flex;
     flex-direction: column;
     gap: 40px;
+}
+
+.add-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 12px;
+    border: 2px dashed #c5cde0;
+    border-radius: 12px;
+    background-color: transparent;
+    color: #778da9;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition:
+        border-color 0.2s ease,
+        color 0.2s ease,
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.add-button:hover {
+    border-color: #778da9;
+    background-color: #f0f4f8;
+    color: #415a77;
+    transform: translateY(-2px);
+}
+
+.add-button:active {
+    transform: translateY(0);
+}
+
+button {
+    color: white;
+    border: none;
+    background-color: #778da9;
+    height: 35px;
+    border-radius: 10px;
+    font-size: 15px;
 }

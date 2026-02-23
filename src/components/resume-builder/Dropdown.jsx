@@ -21,7 +21,7 @@ function Dropdown({ sections }) {
                         <div className="section-name">{section.name}</div>
                         <img src={caret} alt="" className={selected === index ? "selected" : ""} />
                     </div>
-                    {selected === index && section.children}
+                    <div className={`dropdown-children ${selected === index ? "open" : ""}`}>{section.children}</div>
                 </>
             ))}
         </div>
