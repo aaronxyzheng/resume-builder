@@ -1,5 +1,6 @@
 import "./Resume.css";
-import Header from "./resume-parts/header";
+import Header from "./resume/header";
+import Education from "./resume/education";
 
 function Resume({ info }) {
     return (
@@ -7,22 +8,7 @@ function Resume({ info }) {
             <Header personalInfo={info.personalInfo} />
             <div id="content">
                 {info.education.length > 0 && (
-                    <div id="education">
-                        <div className="section-header">Education</div>
-                        {info.education.map((school) => (
-                            <div className="school">
-                                <div className="school-metadata">
-                                    <div>{school.startDate + " - " + school.endDate}</div>
-                                    <div>{school.location}</div>
-                                </div>
-
-                                <div>
-                                    <div className="school-name">{school.name}</div>
-                                    <div>{school.degree}</div>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
+                    <Education educationInfo={info.education}/>
                 )}
             </div>
         </div>

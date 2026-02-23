@@ -1,0 +1,21 @@
+.school {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+.school .school-metadata {
+    width: 150px;
+}
+
+.school > div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.school-name {
+    font-weight: bold;
+}
