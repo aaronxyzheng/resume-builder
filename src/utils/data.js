@@ -11,31 +11,29 @@ class Data {
                 location: "Manhattan, New York City",
             },
             education: [
-                new School(
-                    "Massachusetts Institute of Technology",
-                    "B.S. Physics & Electrical Engineering (Summa Cum Laude)",
-                    "Sep 1984",
-                    "May 1986",
-                    "Cambridge, MA",
-                    crypto.randomUUID(),
-                ),
-                new School(
-                    "Massachusetts Institute of Technology",
-                    "M.S. Applied Mathematics & Computer Science",
-                    "Sep 1986",
-                    "Dec 1987",
-                    "Cambridge, MA",
-                    crypto.randomUUID(),
-                ),
-                new School(
-                    "Massachusetts Institute of Technology",
-                    "Ph.D. Electrical Engineering & Computer Science",
-                    "Jan 1988",
-                    "May 1990",
-                    "Cambridge, MA",
-                    crypto.randomUUID(),
-                ),
+                new School({
+                    name: "Massachusetts Institute of Technology",
+                    degree: "B.S. Physics & Electrical Engineering (Summa Cum Laude)",
+                    startDate: "Sep 1984",
+                    endDate: "May 1986",
+                    location: "Cambridge, MA",
+                }),
+                new School({
+                    name: "Massachusetts Institute of Technology",
+                    degree: "M.S. Applied Mathematics & Computer Science",
+                    startDate: "Sep 1986",
+                    endDate: "Dec 1987",
+                    location: "Cambridge, MA",
+                }),
+                new School({
+                    name: "Massachusetts Institute of Technology",
+                    degree: "Ph.D. Electrical Engineering & Computer Science",
+                    startDate: "Jan 1988",
+                    endDate: "May 1990",
+                    location: "Cambridge, MA",
+                }),
             ],
+            experience: [],
         };
     }
 

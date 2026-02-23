@@ -21,6 +21,16 @@ function ResumeBuilder({ addSchool, updateSchool, updatePersonalInfo, clearInfo,
                 />
                 <button className="add-button" onClick={addSchool}>+ Add School</button>
             </div>
+            <div className="dropdown-div">
+                <h1>Experience</h1>
+                <Dropdown
+                    sections={info.education.map((school) => ({
+                        name: school.name,
+                        children: <SchoolInput schoolInfo={school} updateSchool={updateSchool} />,
+                    }))}
+                />
+                <button className="add-button" onClick={addSchool}>+ Add School</button>
+            </div>
         </div>
     );
 }

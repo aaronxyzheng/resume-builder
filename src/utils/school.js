@@ -1,11 +1,11 @@
 class School {
-    constructor(name, degree, startDate, endDate, location, key) {
+    constructor({ name, degree, startDate, endDate, location }) {
         this.name = name;
         this.degree = degree;
         this.startDate = startDate;
         this.endDate = endDate;
         this.location = location;
-        this.key = key
+        this.key = crypto.randomUUID();
     }
 }
 

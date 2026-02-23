@@ -29,8 +29,17 @@ function App() {
     function addSchool() {
         setInfo((prev) => ({
             ...prev,
-            education: [...prev.education, new School("School", "Degree", "Start", "End", "Location", crypto.randomUUID())]
-        }))
+            education: [
+                ...prev.education,
+                new School({
+                    name: "School",
+                    degree: "Degree",
+                    startDate: "Start",
+                    endDate: "End",
+                    location: "Location",
+                }),
+            ],
+        }));
     }
 
     return (
