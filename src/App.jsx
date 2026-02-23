@@ -25,7 +25,7 @@ function App() {
                 updatePersonalInfo={updatePersonalInfo}
                 clearInfo={clearInfo}
                 setExample={setExample}
-                personalInfo={info.personalInfo}
+                info={info}
             />
         </>
     );

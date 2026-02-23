@@ -1,0 +1,32 @@
+#button-div {
+    display: flex;
+    padding: 5px 0px;
+}
+
+#button-div > div {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 10px 0;
+    border-radius: 20px;
+}
+
+#button-div button {
+    border: none;
+    height: 18px;
+    width: auto;
+    font-size: 20px;
+    font-weight: 350;
+    background-color: white;
+}
+
+#delete-button-div button {
+    color: #e35c5c;
+}
+
+#load-example-div,
+#load-example-div button {
+    background-color: #f3f4f6;
+}

@@ -1,0 +1,11 @@
+#personal-information {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#personal-information > div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

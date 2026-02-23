@@ -1,6 +1,6 @@
 import "./Resume.css";
-import Header from "./resume/header";
-import Education from "./resume/education";
+import Header from "./resume/header.jsx";
+import Education from "./resume/education.jsx";
 
 function Resume({ info }) {
     return (
