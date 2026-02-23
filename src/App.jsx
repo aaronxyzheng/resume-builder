@@ -7,11 +7,11 @@ function App() {
     const [info, setInfo] = useState(Data.returnEmptyInfo());
 
     function clearInfo() {
-        setInfo(Data.returnEmptyInfo);
+        setInfo(Data.returnEmptyInfo());
     }
 
     function setExample() {
-        setInfo(Data.returnExampleInfo);
+        setInfo(Data.returnExampleInfo());
     }
 
     function updatePersonalInfo(field, value) {
