@@ -3,6 +3,7 @@ import ResumeBuilder from "./components/ResumeBuilder";
 import { useState } from "react";
 import Data from "./utils/data";
 import School from "./utils/school";
+import Experience from "./utils/experience";
 
 function App() {
     const [info, setInfo] = useState(Data.returnEmptyInfo());
@@ -26,6 +27,30 @@ function App() {
         }));
     }
 
+    function updateExperience(key, field, value) {
+        setInfo((prev) => ({
+            ...prev,
+            experience: prev.experience.map((exp) => (exp.key === key ? { ...exp, [field]: value } : exp)),
+        }));
+    }
+
+    function addExperience() {
+        setInfo((prev) => ({
+            ...prev,
+            experience: [
+                ...prev.experience,
+                new Experience({
+                    name: "Job Name",
+                    role: "Role",
+                    startDate: "Start",
+                    endDate: "End",
+                    location: "Location",
+                    description: "Description",
+                }),
+            ],
+        }));
+    }
+
     function addSchool() {
         setInfo((prev) => ({
             ...prev,
@@ -46,6 +71,8 @@ function App() {
         <>
             <Resume info={info} />
             <ResumeBuilder
+                addExperience={addExperience}
+                updateExperience={updateExperience}
                 updatePersonalInfo={updatePersonalInfo}
                 clearInfo={clearInfo}
                 setExample={setExample}

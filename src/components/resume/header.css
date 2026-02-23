@@ -1,4 +1,5 @@
 header {
+    flex-shrink: 0;
     height: 20%;
     background-color: #778da9;
 

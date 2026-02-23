@@ -1,0 +1,32 @@
+.experience {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    font-size: 12px;
+    margin-top: 20px;
+    animation: fadeIn 0.4s ease both;
+}
+
+.experience > div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.experience .experience-metadata {
+    width: 150px;
+    flex-shrink: 0;
+}
+
+.experience > div:last-child {
+    flex: 1;
+    min-width: 0;
+}
+
+.experience-name {
+    font-weight: bold;
+}
+
+.experience-description {
+    word-wrap: break-word;
+}
