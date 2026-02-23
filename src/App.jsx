@@ -18,6 +18,13 @@ function App() {
         setInfo((prev) => ({ ...prev, personalInfo: { ...prev.personalInfo, [field]: value } }));
     }
 
+    function updateSchool(key, field, value) {
+        setInfo((prev) => ({
+            ...prev,
+            education: prev.education.map((school) => (school.key === key ? { ...school, [field]: value } : school)),
+        }));
+    }
+
     return (
         <>
             <Resume info={info} />
@@ -26,6 +33,7 @@ function App() {
                 clearInfo={clearInfo}
                 setExample={setExample}
                 info={info}
+                updateSchool={updateSchool}
             />
         </>
     );

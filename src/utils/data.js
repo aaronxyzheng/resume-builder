@@ -23,8 +23,23 @@ class Data {
                 website: "",
                 location: "",
             },
-            education: [new School("Columbia", "Computer Science", "1/18/2018", "Right Now", "Briarcliff Manor", "0"), 
-                        new School("Mit", "Bioengineering", "5/6/2023", "8/9?2025", "Boston", "1")
+            education: [
+                new School(
+                    "Columbia",
+                    "Computer Science",
+                    "1/18/2018",
+                    "Right Now",
+                    "Briarcliff Manor",
+                    crypto.randomUUID(),
+                ),
+                new School(
+                    "MIT", 
+                    "Bioengineering", 
+                    "5/6/2023", 
+                    "8/9/2025", 
+                    "Boston", 
+                    crypto.randomUUID()
+                ),
             ],
         };
     }

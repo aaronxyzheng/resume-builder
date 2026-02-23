@@ -9,7 +9,6 @@ input {
 
 #resume-builder {
     flex: 1;
-    height: 500vh;
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -19,4 +18,10 @@ input {
     border-radius: 20px;
     background-color: white;
     padding: 20px 30px;
+}
+
+.dropdown-div {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }

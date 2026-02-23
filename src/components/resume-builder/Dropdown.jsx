@@ -1,5 +1,5 @@
 import "./Dropdown.css";
-import { useState } from "react";
+import React, { useState } from "react";
 import caret from "../../assets/caret.svg";
 
 function Dropdown({ sections }) {
@@ -14,14 +14,14 @@ function Dropdown({ sections }) {
     }
 
     return (
-        <div>
+        <div className="dropdown">
             {sections.map((section, index) => (
                 <>
-                <div className="dropdown-section" onClick={() => sectionClicked(index)}>
-                    <div className="section-name">{section.name}</div>
-                    <img src={caret} alt="" className={selected === index ? "selected" : ""} />
-                </div>
-                {(selected === index) && section.children}
+                    <div className="dropdown-section" onClick={() => sectionClicked(index)}>
+                        <div className="section-name">{section.name}</div>
+                        <img src={caret} alt="" className={selected === index ? "selected" : ""} />
+                    </div>
+                    {selected === index && section.children}
                 </>
             ))}
         </div>

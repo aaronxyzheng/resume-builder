@@ -1,0 +1,20 @@
+.school-input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.school-input label {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.date-div {
+    display: flex;
+    gap: 25px;
+}
+
+.date-div > label {
+    flex: 1;
+}
