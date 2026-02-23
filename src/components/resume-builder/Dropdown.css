@@ -1,0 +1,20 @@
+.dropdown-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.section-name {
+    font-size: 28px;
+    font-weight: 450;
+}
+
+.dropdown-section img {
+    height: 40px;
+    width: 40px;
+    transition: transform 0.5s ease;
+}
+
+.dropdown-section img.selected {
+    transform: rotate(180deg);
+}
