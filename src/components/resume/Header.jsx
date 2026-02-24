@@ -1,4 +1,4 @@
-import "./header.css";
+import "./Header.css";
 import mailIcon from "../../assets/mail.svg";
 import phoneIcon from "../../assets/phone.svg";
 import linkIcon from "../../assets/link.svg";

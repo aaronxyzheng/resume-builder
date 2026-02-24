@@ -1,10 +1,10 @@
-.school-input {
+.form-input {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.school-input label {
+.form-input label {
     display: flex;
     flex-direction: column;
     gap: 5px;

@@ -1,8 +1,8 @@
-import "./SchoolInput.css";
+import "./FormInput.css";
 
 function SchoolInput({ updateSchool, schoolInfo }) {
     return (
-        <div className="school-input">
+        <div className="form-input">
             <label>
                 School Name
                 <input

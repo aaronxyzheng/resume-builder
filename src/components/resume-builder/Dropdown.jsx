@@ -1,28 +1,26 @@
 import "./Dropdown.css";
-import React, { useState } from "react";
+import { useState } from "react";
 import caret from "../../assets/caret.svg";
 
 function Dropdown({ sections }) {
-    const [selected, setSelected] = useState(-1);
+    const [selected, setSelected] = useState(null);
 
-    function sectionClicked(index) {
-        if (selected === index) {
-            setSelected(-1);
-        } else {
-            setSelected(index);
-        }
+    function sectionClicked(key) {
+        setSelected((prev) => (prev === key ? null : key));
     }
 
     return (
         <div className="dropdown">
-            {sections.map((section, index) => (
-                <>
-                    <div className="dropdown-section" onClick={() => sectionClicked(index)}>
+            {sections.map((section) => (
+                <div key={section.key}>
+                    <div className="dropdown-section" onClick={() => sectionClicked(section.key)}>
                         <div className="section-name">{section.name}</div>
-                        <img src={caret} alt="" className={selected === index ? "selected" : ""} />
+                        <img src={caret} alt="" className={selected === section.key ? "selected" : ""} />
                     </div>
-                    <div className={`dropdown-children ${selected === index ? "open" : ""}`}>{section.children}</div>
-                </>
+                    <div className={`dropdown-children ${selected === section.key ? "open" : ""}`}>
+                        {section.children}
+                    </div>
+                </div>
             ))}
         </div>
     );

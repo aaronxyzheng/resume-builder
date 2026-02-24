@@ -1,6 +1,8 @@
+import "./FormInput.css";
+
 function ExperienceInput({ updateExperience, experienceInfo }) {
     return (
-        <div className="school-input">
+        <div className="form-input">
             <label>
                 Job Name
                 <input
